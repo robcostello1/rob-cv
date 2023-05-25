@@ -8,7 +8,7 @@ function App() {
     <div className={classes.root}>
       <Header subheader={"Senior Frontend Engineer"}>Rob Costello</Header>
 
-      <Timeline items={["Infogrid: Senior Frontend Engineer"]} />
+      <Timeline items={[{ title: "Infogrid: Senior Frontend Engineer" }]} />
     </div>
   );
 }

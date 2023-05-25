@@ -1,16 +1,15 @@
-import { ReactNode } from "react";
-
 import classes from "./Timeline.module.css";
 import TimelineItem from "./TimelineItem";
+import { TimeLineItem } from "./types";
 
 interface TimelineProps {
-  items: ReactNode[];
+  items: TimeLineItem[];
 }
 
 const Timeline = ({ items }: TimelineProps) => (
   <div className={classes.root}>
     {items.map((item) => (
-      <TimelineItem>{item}</TimelineItem>
+      <TimelineItem key={item.id} {...item} />
     ))}
   </div>
 );

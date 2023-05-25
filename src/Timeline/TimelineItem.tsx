@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
-
 import classes from "./Timeline.module.css";
+import Card from "../Card";
+import { TimeLineItem as TimeLineItemProps } from "./types";
 
-interface TimelineItemProps {
-  children: ReactNode;
-}
-
-const TimelineItem = ({ children }: TimelineItemProps) => (
-  <div className={classes.item}>{children}</div>
+const TimelineItem = ({ title, date }: TimeLineItemProps) => (
+  <div className={classes.item}>
+    <Card header={title} subheader={date}>
+      {null}
+    </Card>
+  </div>
 );
 
 export default TimelineItem;
