@@ -1,5 +1,15 @@
 .root {
+    position: relative;
     margin: auto;
     max-width: 1000px;
     padding: 2rem;
+}
+
+.background {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    right: 0;
+    height: 66vw;
+    mix-blend-mode: screen;
 }

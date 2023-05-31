@@ -3,11 +3,13 @@
   --color-bg:  #0f0e15;
   --color-bg-trans: rgba(15, 14, 21, 56%);
   --color-bg-30: #1e1a2d;
+  --color-bg-50: #322b50;
   --color-bg-70: #584896;
-  --color-bg-alt: #725AC1;
+  --color-bg-alt: #675b90;
   --color-mid: #8D86C9;
   --color-light: #CAC4CE;
-  --color-text: #ded8dd;
+  --color-text: #d6dcdc;
+  --color-contrast: #6fc79f;
 
   --border-radius: 4px;
 
@@ -25,6 +27,8 @@
   color: var(--color-text);
   color-scheme: light dark;
   background-color: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.666rem;
 }
 
 a {
@@ -53,13 +57,55 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  color: var(--color-mid);
+}
+
 p, .para {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
+p:last-child, .para:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 2rem;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0.45rem;
+  left: -1.5rem;
+  background-color: var(--color-bg-alt);
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+}
+
 .sub {
-  font-weight: 200;
+  font-weight: 300;
+}
+
+.small {
+  font-size: 0.75rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 button {
@@ -70,20 +116,20 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   font-family: inherit;
-  background-color: var(--color-mid);
+  background-color: var(--color-contrast);
   cursor: pointer;
   transition: all 0.66s;
   color: var(--color-bg);
 }
 button:hover {
-  color: var(--color-mid);
+  color: var(--color-contrast);
   background-color: transparent;
-  border-color: var(--color-mid);
+  border-color: var(--color-contrast);
   transition: all 0.25s;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto var(--color-mid);
+  outline: 4px auto var(--color-contrast);
 }
 
 /* TODO */

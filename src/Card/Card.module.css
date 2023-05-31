@@ -11,3 +11,13 @@
 .root.skeleton > * {
    opacity: 0;
 }
+
+.footer {
+    margin-top: 1.25rem;
+}
+
+.subheader {
+    margin-top: -1rem;
+    font-weight: 200;
+    color: var(--color-mid);
+}

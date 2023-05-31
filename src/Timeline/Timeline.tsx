@@ -1,8 +1,11 @@
 import { useState } from "react";
-import classes from "./Timeline.module.css";
+
 import TimelineItem from "./TimelineItem";
+import EmployerModal from "./EmployerModal/EmployerModal";
+
 import { TimeLineItem } from "./types";
-import Modal from "../Modal/Modal";
+
+import classes from "./Timeline.module.css";
 
 interface TimelineProps {
   items: Omit<TimeLineItem, "onClick" | "isActive">[];
@@ -22,12 +25,10 @@ const Timeline = ({ items }: TimelineProps) => {
         />
       ))}
 
-      <Modal
-        layoutId={activeItem ? activeItem : null}
-        onClick={() => setActiveItem(null)}
-      >
-        {items?.find((item) => item.id === activeItem)?.description}
-      </Modal>
+      <EmployerModal
+        item={items.find((item) => item.id === activeItem)}
+        onClose={() => setActiveItem(null)}
+      />
     </div>
   );
 };

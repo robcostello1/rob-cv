@@ -23,8 +23,22 @@ const Modal = ({
           animate={layoutId ? "open" : "closed"}
           variants={backdropVariants}
         >
-          <motion.div layoutId={layoutId} onClick={onClick}>
-            <Card {...props} isSkeleton={!layoutId} />
+          <motion.div
+            className={classes.modal}
+            layoutId={layoutId}
+            onClick={onClick}
+          >
+            <Card
+              {...props}
+              isSkeleton={!layoutId}
+              footer={
+                <div className="right">
+                  <button className={classes.button} onClick={onClick}>
+                    Close
+                  </button>
+                </div>
+              }
+            />
           </motion.div>
         </motion.div>
       )}
