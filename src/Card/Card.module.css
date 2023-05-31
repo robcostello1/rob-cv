@@ -1,5 +1,13 @@
 .root {
-    background-color: gray;
-    padding: 1rem;
-    border-radius: 4px;
+    background-color: var(--color-bg-30);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.root > * {
+    transition: opacity 0.05s;
+}
+
+.root.skeleton > * {
+   opacity: 0;
 }

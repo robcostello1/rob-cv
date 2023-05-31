@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header = ({ children, subheader }: HeaderProps) => (
   <header className={classes.root}>
     <h1>{children}</h1>
-    <p>{subheader}</p>
+    <p className="sub">{subheader}</p>
   </header>
 );
 
